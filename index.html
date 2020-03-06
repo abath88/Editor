@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div onblur="noedit()" onclick="myedit()">
+        <div id="toolbar">
+            <button onclick="link()">Link</button>
+            <button onclick="document.execCommand('bold', false, '')">Bold</button>
+            <button onclick="cut()">Cut</button>
+            <button onclick="copy()">copy</button>
+            <button onclick="paste()">Paste</button>
+            <button onclick="toggleEdit()">Edit</button>
+            <select onchange="fontChange(event)">
+                <option value="Arial">Arial</option>
+                <option value="Time New Roman">Time New Roman</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+        </div>
+
+        <div id="editor" contenteditable="true">
+            <p>afjaifai</p>
+        </div>
+    </div>
+    <script src="editor.js"></script>
+</body>
+</html>
